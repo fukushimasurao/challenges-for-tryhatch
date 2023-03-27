@@ -21,7 +21,12 @@ class GoogleSearch extends Component
         $searchEngineId = config('app.search_engine_id');
         $url = "https://www.googleapis.com/customsearch/v1?key={$apiKey}&cx={$searchEngineId}&q={$this->query}";
         $response = Http::get($url);
-        $this->results = $response->json()['items'];
+
+        if (array_key_exists('items', $response->json())) {
+            $this->results = $response->json()['items'];
+        } else {
+            $this->results = NULL;
+        }
     }
 
     public function render()

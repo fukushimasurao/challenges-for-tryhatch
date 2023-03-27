@@ -50,6 +50,8 @@
                             </li>
                         @endforeach
                     </ul>
+                @elseif($results === NULL)
+                    <p>検索結果はありません。</p>
                 @endif
             </div>
         </div>
