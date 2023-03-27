@@ -28,7 +28,6 @@
                                     d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                             </svg>
                         </button>
-
                     </form>
                 </div>
                 @error('query')
@@ -37,9 +36,16 @@
                                 class="font-medium">{{ $message }}</span></p>
                     </div>
                 @enderror
+                <div wire:loading.delay wire:target="search">
+                    <p>検索中...</p>
+                </div>
             </div>
+
             <div class="max-w-2xl mx-auto">
                 @if (!empty($results))
+                    <div class="mb-3">
+                        <p class="italic">検索文字 : {{ $searchWords }} </p>
+                    </div>
                     <ul>
                         @foreach ($results as $result)
                             <li class="mb-10">
@@ -54,10 +60,10 @@
                     <p>検索結果はありません。</p>
                 @endif
 
-                <div wire:loading wire:target="search">
-                    検索中...
-                </div>
+
             </div>
+
+
         </div>
     </div>
 </div>
