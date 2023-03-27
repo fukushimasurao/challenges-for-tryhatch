@@ -53,6 +53,10 @@
                 @elseif($results === NULL)
                     <p>検索結果はありません。</p>
                 @endif
+
+                <div wire:loading wire:target="search">
+                    検索中...
+                </div>
             </div>
         </div>
     </div>
