@@ -8,11 +8,15 @@
 
 `$ git clone https://github.com/fukushimasurao/challenges-for-tryhatch.git`
 
+以下プロジェクトディレクトリに`cd`して対応する。
+
 ## ライブラリインストール
 git cloneだけだとsailコマンドも使えない状態なので、docker経由でcomposer installする cd {project-name}してから以下を実行
 
 ```
-docker run --rm \
+$ cd challenges-for-tryhatch 
+
+$ docker run --rm \
     -u "$(id -u):$(id -g)" \
     -v "$(pwd):/var/www/html" \
     -w /var/www/html \
