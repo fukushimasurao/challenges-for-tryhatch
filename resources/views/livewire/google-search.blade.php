@@ -32,9 +32,10 @@
                     </form>
                 </div>
                 @error('query')
-                <div class="flex justify-center items-center xs:flex-none">
-                    <p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">{{ $message }}</span></p>
-                </div>
+                    <div class="flex justify-center items-center xs:flex-none">
+                        <p class="mt-2 text-sm text-red-600 dark:text-red-500"><span
+                                class="font-medium">{{ $message }}</span></p>
+                    </div>
                 @enderror
             </div>
             <div class="max-w-2xl mx-auto">
@@ -42,7 +43,9 @@
                     <ul>
                         @foreach ($results as $result)
                             <li class="mb-10">
-                                <h2 class="text-4xl font-bold dark:text-white"><a href="{{ $result['link'] }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline" target="_blank">{{ $result['title'] }}</a></h2>
+                                <h2 class="text-4xl font-bold dark:text-white"><a href="{{ $result['link'] }}"
+                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                                        target="_blank">{{ $result['title'] }}</a></h2>
                                 <p>{{ $result['snippet'] }}</p>
                             </li>
                         @endforeach
