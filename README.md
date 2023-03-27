@@ -53,6 +53,11 @@ alias sail="./vendor/bin/sail"
 source ~/.bash_profile
 ```
 
+
+## app key 作成
+
+`sail artisan key:generate`
+
 ## ライブラリインストール
 
 `$ sail composer install`
