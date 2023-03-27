@@ -11,13 +11,12 @@ class GoogleSearch extends Component
     public $results = [];
 
     protected $rules = [
-         'query' => 'required|string|min:4|max:255',
+        'query' => 'required|string|min:4|max:255',
     ];
 
     public function search()
     {
         $this->validate();
-
         $apiKey = config('app.api_key');
         $searchEngineId = config('app.search_engine_id');
         $url = "https://www.googleapis.com/customsearch/v1?key={$apiKey}&cx={$searchEngineId}&q={$this->query}";
