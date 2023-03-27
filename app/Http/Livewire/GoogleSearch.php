@@ -11,7 +11,7 @@ class GoogleSearch extends Component
     public $results = [];
 
     protected $rules = [
-        'query' => 'required|string|min:4|max:255',
+        'query' => 'required|string|min:1|max:255',
     ];
 
     public function search()
