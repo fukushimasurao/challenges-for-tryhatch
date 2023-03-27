@@ -3,6 +3,9 @@
         <div class="container xl:max-w-6xl mx-auto px-4">
             <header class="text-center mx-auto mb-12 lg:px-20">
                 <h2 class="text-2xl leading-normal mb-2 font-bold text-black">Google検索</h2>
+                <div class="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
+                    <span class="font-medium">現在、検索結果は上位10件までとなっています。</span>
+                </div>
             </header>
             <div class="max-w-2xl mx-auto mb-7">
                 <div class="flex justify-center items-center xs:flex-none">

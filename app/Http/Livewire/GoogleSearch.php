@@ -28,7 +28,6 @@ class GoogleSearch extends Component
         if ($response->status() === 200 && array_key_exists('items', $response->json())) {
             $this->results = $response->json()['items'];
             $this->searchWords = $this->query;
-
         } else {
             $this->results = NULL;
         }
